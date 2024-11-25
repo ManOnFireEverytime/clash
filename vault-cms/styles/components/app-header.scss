@@ -1,0 +1,35 @@
+.relative {
+    position: relative;
+}
+nav {
+    height: 80px;
+    width: calc(80% - 20px);
+    margin: 0 10px 10px calc(20% + 10px);
+    position: absolute;
+    top: 0;
+    right: 0;
+    box-shadow: 0 0 10px #0000000a;
+    background-color: #FFF;
+    z-index: z('nav');
+
+    div.nav { 
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+        padding-left: 3rem;
+        padding-right: 3rem;
+
+        .right {
+            display: flex;
+            button {
+                background-color: $color-bg;
+                padding: 10px 12px;
+            }
+        }
+    }
+
+    svg {
+        cursor: pointer;
+    }
+}

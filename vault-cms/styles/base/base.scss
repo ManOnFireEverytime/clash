@@ -1,0 +1,265 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  user-select: none;
+}
+
+html {
+  line-height: 1;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  color: $color-black;
+  background-color: $color-white;
+  $vw: 100vw;
+  font-size: calc($vw / 1920px * 13px);
+
+  @include media('<mid') {
+    font-size: calc($vw / 1366px * 13px);
+  }
+
+  @include media('<tablet') {
+    font-size: calc($vw / 1024px * 11px);
+  }
+
+  @include media('<phone') {
+    font-size: calc($vw / 750px * 13px);
+  }
+
+  @include media('<small') {
+    font-size: calc($vw / 500px * 14px);
+  }
+}
+
+h1 {
+  font-weight: 700;
+  line-height: 1.5;
+  $vw: 100vw;
+  font-size: calc($vw / 1920px * 50px);
+
+  @include media('<mid') {
+    font-size: calc($vw / 1366px * 50px);
+  }
+
+  @include media('<tablet') {
+    font-size: calc($vw / 1024px * 50px);
+  }
+
+  @include media('<phone') {
+    font-size: calc($vw / 750px * 50px);
+  }
+
+  @include media('<small') {
+    font-size: calc($vw / 500px * 38px);
+  }
+}
+
+h2 {
+  font-weight: 700;
+  $vw: 100vw;
+  font-size: calc($vw / 1920px * 42px);
+
+  @include media('<mid') {
+    font-size: calc($vw / 1366px * 42px);
+  }
+
+  @include media('<tablet') {
+    font-size: calc($vw / 1024px * 42px);
+  }
+
+  @include media('<phone') {
+    font-size: calc($vw / 750px * 42px);
+  }
+
+  @include media('<small') {
+    font-size: calc($vw / 500px * 28px);
+  }
+}
+
+h3 {
+  font-weight: 700;
+  $vw: 100vw;
+  font-size: calc($vw / 1920px * 35px);
+
+  @include media('<mid') {
+    font-size: calc($vw / 1366px * 35px);
+  }
+
+  @include media('<tablet') {
+    font-size: calc($vw / 1024px * 35px);
+  }
+
+  @include media('<phone') {
+    font-size: calc($vw / 750px * 35px);
+  }
+
+  @include media('<small') {
+    font-size: calc($vw / 500px * 24px);
+  }
+}
+
+h4 {
+  font-weight: 700;
+  $vw: 100vw;
+  font-size: calc($vw / 1920px * 30px);
+
+  @include media('<mid') {
+    font-size: calc($vw / 1366px * 30px);
+  }
+
+  @include media('<tablet') {
+    font-size: calc($vw / 1024px * 30px);
+  }
+
+  @include media('<phone') {
+    font-size: calc($vw / 750px * 30px);
+  }
+
+  @include media('<small') {
+    font-size: calc($vw / 500px * 20px);
+  }
+}
+
+h5 {
+  font-weight: 700;
+  $vw: 100vw;
+  font-size: calc($vw / 1920px * 24px);
+
+  @include media('<mid') {
+    font-size: calc($vw / 1366px * 24px);
+  }
+
+  @include media('<tablet') {
+    font-size: calc($vw / 1024px * 24px);
+  }
+
+  @include media('<phone') {
+    font-size: calc($vw / 750px * 24px);
+  }
+
+  @include media('<small') {
+    font-size: calc($vw / 500px * 18px);
+  }
+}
+
+h6 {
+  font-weight: 500;
+  $vw: 100vw;
+  font-size: calc($vw / 1920px * 16px);
+
+  @include media('<mid') {
+    font-size: calc($vw / 1366px * 16px);
+  }
+
+  @include media('<tablet') {
+    font-size: calc($vw / 1024px * 14px);
+  }
+
+  @include media('<phone') {
+    font-size: calc($vw / 750px * 16px);
+  }
+
+  @include media('<small') {
+    font-size: calc($vw / 500px * 15px);
+  }
+}
+
+.page {
+  padding: 1rem;
+  z-index: z('content');
+}
+
+body {
+  font-family: $font-satoshi;
+  color: $color-black;
+  background-color: $color-bg;
+  
+  @include media('<phone') {
+    overflow-x: hidden;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  outline: none;
+}
+
+.page-btn {
+  margin: 2rem;
+
+  @include media('<phone') {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+
+img {
+  vertical-align: middle;
+}
+
+input, textarea {
+  border: 1px solid $color-grey;
+  width: 100%;
+  border-radius: 10px;
+  padding: 14px 30px;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+  color: $color-grey;
+  font-family: $font-inter;
+  $vw: 100vw;
+  font-size: calc($vw / 1920px * 13px);
+  background: transparent;
+
+  @include media('<mid') {
+    font-size: calc($vw / 1366px * 13px);
+  }
+
+  @include media('<tablet') {
+    font-size: calc($vw / 1024px * 11px);
+  }
+
+  @include media('<phone') {
+    font-size: calc($vw / 750px * 13px);
+  }
+
+  @include media('<small') {
+    font-size: calc($vw / 500px * 13px);
+  }
+
+  &[type='file'] {
+    width: 30%;
+
+    @include media('<small') {
+      width: 70%;
+    }
+  }
+
+  &::placeholder {
+    color: $color-grey;
+  }
+
+  &:focus {
+    border: 1px solid $color-purple;
+    outline: none;
+  }
+}
+
+button {
+  padding: 16px 30px;
+  background-color: $color-purple;
+  color: $color-white;
+  border: none;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  p {
+    color: $color-white !important;
+  }
+}
+
+.inter {
+  font-family: $font-inter;
+}
